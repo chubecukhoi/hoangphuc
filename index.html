@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+  
+  <meta charset=utf-8" />
   <title>Hoàng Phúc</title>
-  <style>
+  <style type="text/css">
+
+    a:hover{color: #ff0000;}
+
+    .grid-ttheader {
+      display: grid;
+      grid-template-columns: 7% 60% 10% 13% 10%;
+    }
+  
     body {
-      font-family: Arial, sans-serif;
+      background-color: lightgray;
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #31b234;
-      color: #000000;
-      padding: 20px;
-      text-align: center;
+      font-family: Bungee Spice;
+      background-color: #ffffff;
+      padding: 10px;
+      text-align: left;
     }
 
     main {
-      background-color: #62cde0;
+      background-color: lightblue;
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
@@ -31,11 +46,50 @@
 </head>
 <body>
   <header>
-    <h1>Thông tin cá nhân</h1>
+    <div class="grid-ttheader">
+
+      <div>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA9lBMVEX////eIhncAADfKyPfKB/xsbDyt7XxtLLiU07neXbcCQDjV1LdGQ3eHxX2zs3lXlrvp6X64uH76ej++vr1x8bmbmr+9vbdGg/v7wDdFQf87e3y8wTuop/42tn64eC4mw3slJHqhIH0w8HodnLtmpjrjIniSUPhOzT31NPmZmLqiIWzkwDggoDUAADhPTfzvbvItQzc0wm+pQ3gMyvs5Mff1Kju59T7/KnBqwD4+JG/pUH+/vPNunL19XrazJn9/ebTxgrm3brz8138/Nbl4Qjx8UD6+sLz79HTxwDQv1zIs2Df2AnErk7d0l6/pTHXyIz5+bTLIBvGyzm5AAAMw0lEQVR4nO2dDXvaRhLHpcVgWCTekRDvb8bGSmwnJDm3SS9pm7a5+K7X+/5f5nb1vkhgxAwScvV/njZgIy0/r3ZmdjS7kjaFl62NdCG/bBX+JoQGeZkyXEJjdll8ibqsGA4huZdepi6JS1hK+6ucSMWcMPPKCbOvnDD7ygmzr5ww+8oJs6+cMPvKCbOvnDD7Og/CUXFWvyso1JCvy4vlfQvz3OkT9otrSghVVFu6wd5dzGpo50+ZsF1cEaKo2xlclRJ92MZpIlXC1owQfUeaWiW0iNJIioStLqH7UvEqqWJ0Y2qEWsXKt++VoSDYnLQIi/v7z5FO4IjpEPbLJGRdohF1DdpWKoQlogQgKLVvElEjgtpYQRtLg3BGPGPC4MqzRqd2c1O7Hy4KhIYgyRLYWsKEbU1qr1xASi6uRM/eHBZC7oP0YU0mSzjuSH3ZcLuvMor4SGe1NUSNNazNRAnvL6UmtfpIJcrOmGUui2aWjEGNJkl41ZDGdgdR0tj3wQoROnEBajVBwvVSalqACrl65qMl4UoloNAmOcLVldTippIFY8+78VHQqJJLSLtJEbY3C0lTdV7ycVBDrUAvGl1IywkRanJdkjbMz5PqgUHKyB+LKoU0nQxhX76WpDplV+jw4GPufUTSBLSdCGFff63xSMYwojzgLlU8pwGqhEmCUFNfN3lDpBzPKMruUKSQyC0BQm1DO3xYkVnMAzteeBf3yKASILxm7k8z1P1OPlJlJ0ZV6oDmT09YJVXmDCmZxz/0xulE9Q7Q/skJF0RtS1eE3Bxz8MruRPUC8AVOTbgkZCTVyJHRc8npRIhDPDHhPWHDr03psQ7NISSAXMZpCUeEstnd+vh80sI4b0LN0PU268fjQxInsDlbwjuFGZg2ZAarnTfhgvKJ4PooK+rqTj9jwgbRWbxdA03upBk9X0Iep7EBCCwf599PVnXgGU5C2GZxGjTVyVSzCAuAM5yMsGrwaxSsPjnXqG1JoFlAR5xQrwJOcCJCFjPTW5QzFVRgPvFEhLqqqjhn4sE3fS77uE+nIVxT+ZjZUuSpFEYYf2rp6ySEl0RWIEMnKB6Zgv5apyDsE1VGuHlriy/MAtmsUxCuFCwzI9lBDSitfwLCBpFVilQMY/WhuoGcAJ+Q++gjsk67xAjPLatfVmRVRjoXU9eApUvxCfmCRky7XFeAjgebsM3sKEpA6op5fJhdxiZcUKD72lZBhd16wibkOVwdMhMIiaqgjDc64bWOvGZaI0BDg0w4ZGeDea9tNdksDFZNi0poZcZwJylsjg8rVMAl5GYGa9bk6JLoZdgZMAmtW+/08PvYh2hKgcMQldC6UwRJ/EVorRx318oXIuGcQG/XRmijw7whKuGFCi9C21abQAv3EAkbVlYMXPAqakRgBVESJqFVp4W9Q0qRQMtL8QiXFFy9FKEKPZsq6LZVh4ZkZ955rzYxiqh2CItwat8jilPztFMf3ruvNALPaCERtq07mUgh6bcP7qsOgVsuJEK7C6Hhh61/PH70TouQ8MEhbNsFrzhJ0p7pvVyBLSkW4dC+SFGyFz98+9F9qRHY5NcSDqFdRYhykX4cPH5yX88x8iEohG5NCEbE9lPP/Kf7ekYQTohCaJefoVjSz4Mv5s/uGzpFOCMG4djuQpR7Fb8M3pqusxgh2BkcQrsiRCYd+Nf5tffVNF1nMQVl811hEDoLB4D5FEu/DR4mE/eNgTITQyB07Aw0n8L1e28wmbjOYoxzkxWBsK7Ay80d9QZP5sR1Frc4k2k4oebWgALzKUx/9fhF6jqLKfh8luCERZcQ/mV6vZ45mTjOAsOOcsEJnYJ6SP7is60fer035sR8/4elj9q4GaFx3FwemNC9SF1veFmuc1WrVfb/9bp7O5w7NnZdj1K5Lf388HXQszR4NB/Z68Gg9+1fUil619y4Oy2ACd3lSe7xQ6Jw6Uz8X4Ov1LYLfjZUiRD3MT+aLuPbpwHDe/NovhMWPgUUOzMFJqw4OyO4pc6NiJ0EaIEPquvIJfic8B27Nh+fOCPHezDN78G/XdqEuioamihCWTe0fYTS98lkYr5lhE8Mz3QC0zMhdGJS3987hAaX4uLLBvPeG0O3r1/rJ6puvbauUumjab79xjrwacJ6899O1OaNQydkSmkcul3mZdnsH6gLrm59425/QWrSumrbFmsmot45lsbev+Q/X9n4e3rD/nvw0lCtecdSzZp9KvabzjxuHgFKuHb2f/CK64ZW3lRxf9++sjs5UBNjrWYSN5/5zIfgk/mWm9FwGxbh0ZlYKKG7ItmbWNiEhv+Jhp3h8G8rWoXNYrnhLxbgxPzKSMNtqCok1wwk9FbreqtGQoTSnZ2l8mKUMOHvNuBk8jCIIuR9KJwxloCEnuX0pk5hwisq/AkiCBngGw44MSP7MFVCdxj61fRhwulzhD/YgOZ303wzODdCd9W8X2seJrRXZ/m51G3Czxag+ecH6b/c1oQbSZOw5Q5Dw7slEyLs25bGtxTbhL9ZPfieTyY+MVsTbiVNQi/s8Ke/24SanYgLZAC2CP8afDPNT8zL1+csQn3Y4S3SIrzyDI3n3ixCWWlxNUfzK6psfWCbkAH+aWXXFtzjTM6sD6vuhkB+cnpIhRjL8ZfBlUsi4U9OfrQmdQ2G+PFLuJWLFAm9HUj8yqzIyFtIcQiEv36x0zL9BiNUOWK4lRQJPUMTSOhHEarCyQXCT076t7Hk1cBqZA2bRahE/OIggQg7PqEXsYQJFVIQklQRUZskKbwP5ei0skV49AI9EOHQ35vDy540xHHIVN2a0UURlohDGEWSImHF2/nQz3fbhHyuM2ezn9o4nDKLIlQ9woilhikSrry91fxUYiMU02wrgnBJ6XOE6VgabwoPJGQWax9hev5Q8wwNkJAvIzpLwmaAUByH8QiXRD5TwhoO4ch5f4aEwb2qRG8Rh7Btp2HOkjDg3H2PH54fbmuLsGq5nPMknAYIvagtLqGzmel5Et4GCL14MiZhw72x07BzAedF6Ic0gaMPJbSrKufeFPo5wlSyiQuf0F+DsCSUad/t0hpRVWfzvRvPVrEZ8oLyLecjli7S5864V0iERsX7/rPpcrrcd0+/xv8GFuHY2/6Rr8ns6tfVRWUaPmA5bTSmET8/TEiER90B9gFP+QRNJMJjhkkAUEGoVNklCOEsMNmNvxfUKLBDKdrq/Qgh+cP4h9eCgHhLv8OCEA4DhEbMKv15cI9ZhDrZ3YIQXgZuQ8fcBqgRPFTBXQy2JaS5Rczy2SvhSJQlDDsFIewHv2ecsra1AHjiTahBWYzgA2IOv0y1VTDhiLFd1l6BCNdK8KseWLk3osJRyOsVw0LKl8oH77pdFLdbh+0of1iDAMJxcDwd5rbFLfMTAATemSkE++OAHbn6d0LO//SXqAQlXIpf+DmHMRcfz0GmRzQZWzBCTbjmnptgzIQhqMau3zpOwEqFW7ET9y2HbF4Ln9WBm0EcLCChJj4yZU94MhSvULo54XRCELTqqyRcpztDzNZK+JxMUBaLHCR4Ba04FAuRiFOxA/WEhqAleCV7XUBUNuEbhp3CVgdeQ57mEFcIK0q6Yi/SrfvU46o4VlWCtlvdQQITtvlkjwoElcCV2uoGn0DGO3ADX3kSS2DCJjOf/YrwpEZK3AU9o+7WIwCVZLx8UPCrtMOdoNao+qUJtL60vMa8vMWnknKSI9AWwjjs/M8eeeNOqVgszW9sR3dzS7cfoUbU02VFdwtj/eHo9cVS6Jv+fUUNPQaPnnyuGy2UdcD9AhuH66tG6f6+OJzVZUJCjzI0BPuTpJD2VLglimI/qZHS8MNvGV83qSAtJKydP0Z3O5+7yZ8DmLyB8YS3A8/9JurhsAxPWWItJTxKmHt91bpEsC+qQYlaSWiStFO4uwq272+vfb9Y6DZOm+w9SPh70LZbN7xor9ZE20oYpiSeSpaucsJo9buV47RYzKbWuuCbYaVeDqu6T85nVvHuNh5H2KQAETKtbQjg+GkChK1VxN//MK2Yg2QxOSF3+ztsT1cm0YcgjeqEkmJilvY4Qq14rOY8vqnwh1XXjj5HvCTBkeMwejOAg1S3YvAp4AzxnudxLOGOKPsA8bU/0u44/XnF3FspeUJZJdIryPEZIKTSq8jFUTlhTohLeLx0i1Cl521L282WqL4nLaj2ltjUqlQmjJBcLEcad/ri74PH+qdsbTeWACFIHWZLXyXVWDqzp46E+QCM55TPD7OvnDD7ygmzr5ww+8oJs6+cMPvKCbOvnDD7ygmzr5ww+8oJs6+cMPvKCbOvnDD7ygmzr5ww+8oJsy+fMI01SUno0iU0ZqXLl6jSzHAIZQNQI3PO4stcbMKXrL8DYeHiZWvzf3nZFk1FWAMTAAAAAElFTkSuQmCC" alt="logo ptit"
+        width="65px">
+      </div>
+
+      <div>
+        <h2>Thông tin cá nhân</h2>
+        
+      </div>
+
+      <div>
+        <h2>
+          <a href="mailto:phuchn573@gmail.com" target="_blank">
+          Gmail
+          </a>
+        </h2>
+      </div>
+      
+      <div>
+        <h2><a href="https://www.facebook.com/profile.php?id=100045283940488&locale=vi_VN" target="_blank">
+          Facebook
+      </a></h2>
+        
+      </div>
+      
+      <div>
+        <h2><a href="https://github.com/chubecukhoi" target="_blank">
+          Github
+      </a></h2>
+        
+      </div>
+    
+    </div>
   </header>
 
   <main>
+    <div>
+      <img src="https://lh3.googleusercontent.com/a/ACg8ocJR2btuDJZ2GQko2DC8y3Ya5xVKqXsg9CoJ8Quv3rBLxrM=s432-c-no" 
+      alt="Ảnh đại diện" width="300px" hspace="250" style="border-radius: 30%;">
+    </div>
     <h2>Giới thiệu</h2>
+    
         <h3>Hoàng Phúc</h3>
         <h3>B21DCVT472</h3>
     <h2>Kinh nghiệm làm việc</h2>
@@ -44,21 +98,15 @@
     </ul>
 
     <h2>Học vấn</h2>
-    <ul>
-      <h3>Sinh viên học viện công nghệ bưu chính viễn thông</h3>
+    <ul style="font-size: 18px;">
+      <li>Ngành Điện tử viễn thông</li>
+      <li>Sinh viên học viện công nghệ bưu chính viễn thông</li>
     </ul>
 
     <h2>Liên hệ</h2>
     <p>Email: phuchn573@gmail.com</p>
 
     <p>Số điện thoại: 0886165742</p>
-
-    <p> <a href="https://www.facebook.com/profile.php?id=100045283940488&locale=vi_VN" target="_blank">
-                Facebook
-            </a></p>
-    <p><a href="https://github.com/chubecukhoi" target="_blank">
-                Github
-            </a></p>
 
   </main>
 </body>
